@@ -1,4 +1,4 @@
-# dsh — DeepSeek Harness plugins
+# utm-dsh — DeepSeek Harness plugins
 
 Cordis-плагины для [DeepSeek Harness](https://github.com/deepseek-ai) (dsh web): каждый плагин — своя папка, ставится снапшотом через `pnpm add file:<папка>` + `insert:` в `cordis.patch.yml`.
 
