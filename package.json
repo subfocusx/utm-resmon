@@ -1,0 +1,52 @@
+{
+  "name": "utm-resmon",
+  "version": "0.1.0",
+  "description": "Resource monitor for DeepSeek Harness: host totals + MCP child processes + in-process plugin code sizes. Tools core (resmon_*) + status-bar chip (/dsh-resmon). Zero runtime deps, Node builtins only.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test/run-tests.mjs && node test/apply-tests.mjs"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.2",
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-locale": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-cordis-client-runner": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-conversation": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-primitives": "^0.2.0-rc.2",
+    "react": "^18.2.0"
+  },
+  "keywords": [
+    "dsh",
+    "cordis",
+    "resmon",
+    "monitor",
+    "memory",
+    "mcp"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-cordis-client-runner",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  }
+}
